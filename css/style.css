@@ -25,7 +25,6 @@ html {
 a {
   color: inherit;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 li {
@@ -36,10 +35,25 @@ img {
   max-width: 100%;
 }
 
+button {
+  color: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0px;
+}
+
 .container {
   max-width: 1220px;
   padding: 0 10px;
   margin: 0 auto;
+}
+
+.section__title {
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 body {
@@ -55,8 +69,8 @@ body {
 }
 
 .nav {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   height: 80px;
 }
@@ -66,8 +80,17 @@ body {
   gap: 0 20px;
 }
 
+.menu__link {
+  text-transform: uppercase;
+}
+
+.logo {
+  justify-self: center;
+}
+
 .basket {
   position: relative;
+  justify-self: end;
 }
 .basket--on span {
   font-size: 11px;
@@ -96,6 +119,7 @@ body {
   padding-top: 16%;
   font-size: 96px;
   margin-bottom: 10px;
+  font-weight: 400;
 }
 
 .subtitle {
@@ -121,6 +145,7 @@ body {
 .buy-btn__text {
   color: #f6f4f5;
   padding: 20px 110px;
+  text-transform: uppercase;
 }
 
 .buy-btn__price {
@@ -131,4 +156,170 @@ body {
 .buy__text {
   padding-top: 6px;
   font-size: 13px;
+}
+
+.features {
+  padding: 100px 0;
+}
+
+.features__titles {
+  display: flex;
+}
+
+.feature__title {
+  padding-right: 20px;
+  flex-basis: 300px;
+}
+
+.features__text {
+  max-width: 330px;
+  text-transform: uppercase;
+  font-size: 36px;
+  margin-bottom: 2px;
+  background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 300px auto;
+}
+
+.tabs__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.tabs__btn-item {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.tabs__btn-item--active {
+  color: #070707;
+}
+
+.tabs__content {
+  position: relative;
+  min-height: 300px;
+}
+
+.tabs__content-item {
+  display: grid;
+  grid-template-columns: auto 280px;
+  grid-template-rows: auto 150px;
+  gap: 40px;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.3s ease;
+}
+
+.tabs__content-item--active {
+  opacity: 1;
+}
+
+.tabs__content-img {
+  grid-row: 1/-1;
+  align-self: stretch;
+}
+
+.tabs__content-box h3 {
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.video {
+  grid-column: 2/3;
+  width: 280px;
+  height: 150px;
+  background-image: url(../images/content-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-start;
+  padding: 9px 10px;
+}
+
+.video__btn {
+  margin-left: 22px;
+}
+
+.video span {
+  font-size: 13px;
+  color: #f6f4f5;
+}
+
+.game {
+  margin-bottom: 100px;
+}
+.game__title {
+  margin-bottom: 50px;
+}
+
+.game__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.game__descr {
+  padding-right: 10px;
+}
+
+.game__descr-title {
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.game__descr-text {
+  margin-bottom: 24px;
+}
+
+.game__link {
+  display: inline-block;
+  background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 16px 15px 12px;
+  width: 225px;
+  text-align: center;
+  border: 1px solid #bc10d8;
+}
+
+.game__item {
+  border: 1px solid #bc10d8;
+  padding: 10px 20px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.game__item-img {
+  margin-bottom: 10px;
+}
+
+.game__item-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.game__item-text {
+  margin-bottom: 30px;
+}
+
+.game__item-link {
+  background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: auto;
 }
